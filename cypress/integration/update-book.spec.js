@@ -27,6 +27,7 @@ describe("When the user wants to update an existent book", () => {
             cy.wait(1000);
             cy.get('#name').type("nombre actualizado")
             cy.get('.ant-modal.ng-tns-c57-2 button.ant-btn-primary').click()
+            cy.wait(1000);
         });
         it("Then the book should be listed with the updated name", () => {
             cy.get('tbody td.ant-table-cell').eq(1).contains("nombre actualizado")
