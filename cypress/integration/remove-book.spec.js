@@ -15,7 +15,7 @@ describe("When the user want to remove a book", () => {
     describe("When the user have selected a book to remove", () => {
         before(() => {
             cy.get('tbody .ant-table-cell input[type=checkbox]').eq(0).click()
-            cy.get('tbody th.ant-table-cell').eq(1).then(($cellname) => {
+            cy.get('tbody td.ant-table-cell').eq(1).then(($cellname) => {
                 name = $cellname.text()
             })
             cy.get('[nztype="default"]').click()
